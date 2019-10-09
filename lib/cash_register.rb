@@ -1,9 +1,10 @@
 class CashRegister
   
-  attr_accessor :total
+  attr_accessor :total, :item_amounts
   attr_reader :discount, :items
   
   def initialize(discount=0)
+    @item_amounts = []
     @items = []
     @total = 0
     @discount = discount
@@ -13,6 +14,7 @@ class CashRegister
     counter = quantity
     while counter >= 1 do
       @items.push(title)
+      @item_amounts.push(item_amounts)
       counter -= 1
     end
       @total = @total + (price * quantity)
