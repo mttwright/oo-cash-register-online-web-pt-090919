@@ -14,7 +14,7 @@ class CashRegister
     counter = quantity
     while counter >= 1 do
       @items.push(title)
-      @item_amounts.push(item_amounts)
+      @item_amounts.push(price)
       counter -= 1
     end
       @total = @total + (price * quantity)
@@ -30,7 +30,7 @@ class CashRegister
   end
   
   def void_last_transaction
-    @total = @total - @item_amounts.pop.to_f
+    @total = @total - @item_amounts.pop
   end
   
     
