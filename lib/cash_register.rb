@@ -14,7 +14,7 @@ class CashRegister
     counter = quantity
     while counter >= 1 do
       @items.push(title)
-      @item_amounts.push(price)
+      @item_amounts.push(price * quantity)
       counter -= 1
     end
       @total = @total + (price * quantity)
